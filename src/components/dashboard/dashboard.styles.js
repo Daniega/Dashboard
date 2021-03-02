@@ -39,9 +39,9 @@ const useStyles = makeStyles((theme) => ({
 	menuButtonHidden: {
 		display: 'none',
 	},
-	title: {
-		flexGrow: 1,
-	},
+	// title: {
+	// 	flexGrow: 1,
+	// },
 	drawerPaper: {
 		position: 'relative',
 		whiteSpace: 'nowrap',
@@ -86,7 +86,34 @@ const useStyles = makeStyles((theme) => ({
 		height: 240,
 	},
 	accountCircle: {
-		marginRight: '5px',
+		marginRight: '10px',
+	},
+	userNameText: {
+		marginRight: '10px',
+		width: 'auto',
+	},
+	listStyle: {
+		color: '#fff',
+		padding: '5px',
+	},
+	userMenu: {
+		display: 'flex',
+		flexDirection: 'row',
+		width: 'auto',
+		alignContent: 'center',
+		alignItems: 'center',
+	},
+	clockHeader: {
+		margin: '0 auto',
+		width: 'auto',
+		alignSelf: 'stretch',
+		maxWidth: '250px',
+		flexGrow: 2,
+		backgroundColor: '#434343',
+		display: 'flex',
+		alignContent: 'center',
+		alignItems: 'center',
+		justifyContent: 'space-around',
 	},
 }));
 
