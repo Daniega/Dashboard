@@ -16,6 +16,47 @@ const theme = createMuiTheme({
 				color: '#fff',
 			},
 		},
+		MuiCardContent: {
+			root: {
+				padding: 0,
+				backgroundColor: '#fff',
+				'&:last-child': {
+					paddingBottom: 0,
+				},
+			},
+		},
+		MuiSelect: {
+			root: {
+				color: '#fff',
+				backgroundColor: '#fffff',
+			},
+		},
+		MuiFormLabel: {
+			root: {
+				color: '#fffff',
+				'&$focused': {
+					color: '#fffff',
+				},
+			},
+		},
+		MuiTextField: {
+			root: {
+				color: '#fffff',
+				width: 200,
+				'&:focus': {
+					color: '#fffff',
+				},
+			},
+		},
+		MuiInputBase: {
+			root: {
+				color: '#fffff',
+				width: 200,
+				'&:focus': {
+					color: '#fffff',
+				},
+			},
+		},
 	},
 	palette: {
 		primary: {
@@ -27,8 +68,8 @@ const theme = createMuiTheme({
 		addition: {
 			main: '#0197e4',
 		},
-		white: {
-			main: '#fff',
+		neutral: {
+			main: '#11cb5f',
 		},
 	},
 });

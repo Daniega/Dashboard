@@ -1,6 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
+	overrides: {
+		MuiCardContent: {
+			root: {
+				padding: 0,
+			},
+		},
+	},
 	root: {
 		minWidth: 275,
 		margin: '0 2px',
@@ -28,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
 	},
 	content: {
 		backgroundColor: '#000',
+		padding: 0,
 	},
 	icon: {
 		fontSize: '12px',

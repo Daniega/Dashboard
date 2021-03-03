@@ -8,11 +8,20 @@ import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 //components
 import TableComponent from '../table/table.component';
+import RfqComponent from '../rfq/rfq.component';
 
 //styles
 import useStyles from './widget.styles';
 
-const Widget = () => {
+const Widget = ({ componentType }) => {
+	const contentComponent = (type) => {
+		if (type === 'Table') {
+			return <TableComponent />;
+		}
+		if (type === 'Rfq') {
+			return <RfqComponent />;
+		} else return;
+	};
 	const classes = useStyles();
 	return (
 		<Card className={classes.root}>
@@ -20,23 +29,14 @@ const Widget = () => {
 				<div className={classes.text}>
 					<CropFreeIcon className={classes.icon} />
 					<FiberManualRecordIcon className={classes.iconGreen} />
-					<p className={classes.paragraph}>Trades</p>
+					<p className={classes.paragraph}>{componentType}</p>
 				</div>
 				<div className={classes.options}>
 					<OpenWithIcon className={classes.icon} />
 					<CloseIcon className={classes.icon} />
 				</div>
 			</div>
-			<CardContent className={classes.content}>
-				{/* Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
-				has been the industry's standard dummy text ever since the 1500s, when an unknown
-				printer took a galley of type and scrambled it to make a type specimen book. It has
-				survived not only five centuries, but also the leap into electronic typesetting,
-				remaining essentially unchanged. It was popularised in the 1960s with the release of
-				Letraset sheets containing Lorem Ipsum passages, and more recently with desktop
-				publishing software like Aldus PageMaker including versions of Lorem Ipsum. */}
-				<TableComponent />
-			</CardContent>
+			<CardContent className={classes.content}>{contentComponent(componentType)}</CardContent>
 		</Card>
 	);
 };

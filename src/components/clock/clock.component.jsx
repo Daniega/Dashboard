@@ -24,7 +24,7 @@ const Clock = () => {
 	const [time, setTime] = useState({ hours: '00', minutes: '00', seconds: '00' });
 	const [date] = useState({
 		day: new Date().getDay(),
-		month: new Date().getMonth(),
+		month: new Date().getMonth() + 1,
 		year: new Date().getFullYear(),
 	});
 
