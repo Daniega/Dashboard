@@ -1,33 +1,19 @@
 import React, { useState, useEffect } from 'react';
-
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core';
 
-const useStyles = makeStyles({
-	clockHeader: {
-		margin: '0 auto',
-		width: 'auto',
-		alignSelf: 'stretch',
-		maxWidth: '250px',
-		flexGrow: 2,
-		backgroundColor: '#434343',
-		display: 'flex',
-		alignContent: 'center',
-		alignItems: 'center',
-		justifyContent: 'space-around',
-	},
-});
+//styles
+import { useStyles } from './clock.styles';
 
+//Clock component to show clock widget on top of AppBar
 const Clock = () => {
 	const classes = useStyles();
-
 	const [time, setTime] = useState({ hours: '00', minutes: '00', seconds: '00' });
 	const [date] = useState({
-		day: new Date().getDay(),
+		day: new Date().getDate(),
 		month: new Date().getMonth() + 1,
 		year: new Date().getFullYear(),
 	});
-
+	//update time function for updaing "time" state
 	const updateTime = () => {
 		let hours = new Date().getHours();
 		let minutes = new Date().getMinutes();
@@ -41,11 +27,11 @@ const Clock = () => {
 		if (minutes < 10) {
 			minutes = `0${minutes}`;
 		}
-		setTime({ hours: hours, minutes: minutes, seconds: seconds });
+		setTime({ hours, minutes, seconds });
 	};
 
 	useEffect(() => {
-		var timerID = setInterval(() => updateTime(), 1000);
+		var timerID = setInterval(() => updateTime(), 1000); //updting the time every second
 		return function cleanup() {
 			clearInterval(timerID);
 		};

@@ -36,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
 	content: {
 		backgroundColor: '#000',
 		padding: 0,
+		overflow: 'auto',
 	},
 	icon: {
 		fontSize: '12px',

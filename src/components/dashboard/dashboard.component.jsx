@@ -14,20 +14,22 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import KeyboardArrowDownIcon from '@material-ui/icons/KeyboardArrowDown';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import { mainListItems } from '../listItems';
+//styles
 import useStyles from './dashboard.styles.js';
-
 //components
 import Content from '../content/content.container';
 import Clock from '../clock/clock.component';
 
+//Dashboard component, including AppBar, Drawer and Content Component
 const Dashboard = () => {
 	const classes = useStyles();
 	const theme = useTheme();
 	const [open, setOpen] = useState(false);
-
+	//handle Drawer click to open Drawer
 	const handleDrawerOpen = () => {
 		setOpen(true);
 	};
+	//handle Drawer click to close Drawer
 	const handleDrawerClose = () => {
 		setOpen(false);
 	};

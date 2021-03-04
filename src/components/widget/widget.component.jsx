@@ -14,6 +14,7 @@ import RfqComponent from '../rfq/rfq.component';
 import useStyles from './widget.styles';
 
 const Widget = ({ componentType }) => {
+	//Check the componentType prop for rendering the corresponding contentComponent
 	const contentComponent = (type) => {
 		if (type === 'Table') {
 			return <TableComponent />;

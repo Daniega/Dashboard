@@ -1,41 +1,24 @@
 import React from 'react';
-import { makeStyles, withStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
-import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
+//styles
+import { StyledTableCell, useStyles } from './table.styles';
 
+//structure of data
 function createData(name, calories, fat, carbs, protein) {
 	return { name, calories, fat, carbs, protein };
 }
-
+//dummy data for table, array of objects using createData function
 const rows = [
-	createData('Frozen yoghurt', 159, 6.0, 24, 4.0),
-	createData('Ice cream sandwich', 237, 9.0, 37, 4.3),
-	createData('Eclair', 262, 16.0, 24, 6.0),
-	createData('Cupcake', 305, 3.7, 67, 4.3),
-	createData('Gingerbread', 356, 16.0, 49, 3.9),
+	createData('Client_test', 159, 6.0, 'BTC-USD', 4.0),
+	createData('Broker_test', 237, 9.0, 'BTC-EUR', 4.3),
+	createData('Client_test_qa', 262, 16.0, 'EUR-USD', 6.0),
+	createData('Client_test_devops', 305, 3.7, 'XRP-USD', 4.3),
+	createData('Client_test_back', 356, 16.0, 'ETH-USD', 3.9),
 ];
-
-const useStyles = makeStyles({
-	table: {
-		minWidth: 400,
-	},
-});
-
-const StyledTableCell = withStyles((theme) => ({
-	head: {
-		color: theme.palette.common.white,
-	},
-	root: {
-		borderBottom: 'none',
-	},
-	body: {
-		color: theme.palette.common.white,
-	},
-}))(TableCell);
-
+//Component for rendering table with data
 const TableComponent = () => {
 	const classes = useStyles();
 
@@ -43,11 +26,11 @@ const TableComponent = () => {
 		<Table className={classes.table} size='small' aria-label='a dense table'>
 			<TableHead>
 				<TableRow>
-					<StyledTableCell>Dessert</StyledTableCell>
-					<StyledTableCell align='left'>Calories</StyledTableCell>
-					<StyledTableCell align='left'>Fat</StyledTableCell>
-					<StyledTableCell align='left'>Carbs</StyledTableCell>
-					<StyledTableCell align='left'>Protein</StyledTableCell>
+					<StyledTableCell>Username</StyledTableCell>
+					<StyledTableCell align='left'>Quantity</StyledTableCell>
+					<StyledTableCell align='left'>Price</StyledTableCell>
+					<StyledTableCell align='left'>Product</StyledTableCell>
+					<StyledTableCell align='left'>Sales PL</StyledTableCell>
 				</TableRow>
 			</TableHead>
 			<TableBody>

@@ -7,17 +7,19 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+//styles
 import { useStyles, AntTab, AntTabs, theme } from './rfq.styles';
 
+//Rfq Component for buying and selling Currencies
 const RfqComponent = () => {
 	const classes = useStyles();
 	const [value, setValue] = useState(0);
 	const [currency, setCurrency] = useState('');
-
+	//handle Tabs click
 	const handleChange = (event, newValue) => {
 		setValue(newValue);
 	};
-
+	//handle FormControl Select click
 	const handleSelectChange = (event) => {
 		setCurrency(event.target.value);
 	};
