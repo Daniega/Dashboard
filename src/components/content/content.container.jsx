@@ -7,7 +7,6 @@ import { useStyles } from './content.styles';
 //Content of Dashboard. filled with Widgets
 const Content = () => {
 	const classes = useStyles();
-	//fill screen with Widgets
 	return (
 		<div className={classes.container}>
 			<Grid container>
