@@ -9,7 +9,7 @@ import ReorderIcon from '@material-ui/icons/Reorder';
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
 
 const whiteColor = '#fff';
-//listItems fo showing Icons in Drawer component (inside Dashboard)
+//listItems for showing Icons in Drawer component (inside Dashboard)
 export const mainListItems = (
 	<div>
 		<ListItem button>
